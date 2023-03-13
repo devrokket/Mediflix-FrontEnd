@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Sidebar from './componenets/Sidebar';
+import Sidebar from './componenets/Sidebar'; // import 추가한 부분.
 
 function App() {
   const handleButton1Click = () => {
