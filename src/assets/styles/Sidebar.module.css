@@ -1,10 +1,15 @@
+body {
+  height: 1080px;
+  width: 1920px;
+  margin: 0 auto;
+}
+
 .sidebar {
-  position: fixed;
-  top: 81px;
-  left: 0;
-  width:  150px;
-  height: 100%;
+  /* position: fixed; */
+  width:  246px;
+  height: 978px;
   background-color: #f1f1f1;
+  box-sizing: border-box;
   padding: 20px;
 }
 
