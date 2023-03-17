@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Sidebar from './componenets/Sidebar'; // import 추가한 부분.
+import Sidebar from './components/Sidebar'; // import 추가한 부분.
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Page1 from './Page1';
+import Page2 from './Page2';
+import Page3 from './Page3';
 
 function App() {
   const handleButton1Click = () => {
@@ -14,27 +19,23 @@ function App() {
   const handleButton3Click = () => {
     console.log('버튼 3이 클릭되었습니다.');
   };
+
+  
   return (
     <div className="App">
-      <Sidebar 
-        onButton1Click={handleButton1Click}
-        onButton2Click={handleButton2Click}
-        onButton3Click={handleButton3Click}
-      />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Sidebar
+          handleButton1Click={handleButton1Click}
+          handleButton2Click={handleButton2Click}
+          handleButton3Click={handleButton3Click}
+        />
+        <Routes>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/page1" component={Page1} />
+            <Route path="/page2" component={Page2} />
+            <Route path="/page3" component={Page3} />
+        </Routes>
+      </Router>
     </div>
   );
 }
