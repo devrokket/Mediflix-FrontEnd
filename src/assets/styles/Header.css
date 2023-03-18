@@ -2,7 +2,7 @@ body {
     height: 1080px;
     width: 1920px;
     margin: 0 auto;
-  }
+}
 
 .header {
     color: black;
@@ -16,7 +16,7 @@ body {
     background-color: white;
 }
 
-.title{
+.title {
     display: flex;
     font-size: 30px;
     font-weight: bolder;
@@ -26,10 +26,10 @@ body {
     align-items: center;
 }
 
-.logo{
+.logo {
     width: 250px;
     margin-left: 34px;
-} 
+}
 
 .nav {
     justify-content: center;
@@ -42,7 +42,7 @@ body {
     width: 300px;
     display: flex;
 }
-  
+
 .nav__list {
     display: inline-flex;
     justify-content: space-around;
