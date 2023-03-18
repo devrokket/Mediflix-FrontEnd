@@ -4,7 +4,7 @@ body {
   margin: 0 auto;
 }
 
-.box {
+.box{
   background-color: #ddd;
   height: 1080px;
   width: 1920px;
@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 
-.header_wrapper {
+.header_wrapper{
   height: 102px;
   position: relative;
 }

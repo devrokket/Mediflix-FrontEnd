@@ -35,10 +35,10 @@ function App() {
         </header>
         <div className='next_sidebar'>
           <aside className='sidebar_wrapper'>
-            <Sidebar
-              onButton1Click={handleButton1Click}
-              onButton2Click={handleButton2Click}
-              onButton3Click={handleButton3Click}
+            <Sidebar 
+            onButton1Click={handleButton1Click}
+            onButton2Click={handleButton2Click}
+            onButton3Click={handleButton3Click}
             />
           </aside>
 
@@ -80,7 +80,7 @@ function App() {
         </div>
 
 
-      </section>
+</section>
     </BrowserRouter>
   );
 }
