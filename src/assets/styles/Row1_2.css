@@ -1,0 +1,13 @@
+.row1_2_content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.row1_2_contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
