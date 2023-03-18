@@ -1,0 +1,43 @@
+.row1_1_content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.row1_1_content_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.row1_1_content_2 {
+    background-color: darkgray;
+    height: 100%;
+}
+
+.row1_1_title {
+    margin-left: 17px;
+}
+
+.row1_1_content button {
+    height: fit-content;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.row1_1_graph_text {
+    display: flex;
+    margin-left: 40px;
+}
+
+.row1_1_graph_text ul {
+    font-size: 13px;
+    display: inline-flex;
+    gap: 30px;
+}
+
+.row1_1_graph_text ul li {
+    list-style-type: circle;
+}
