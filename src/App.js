@@ -1,5 +1,6 @@
 import './index.css';
 import './App.css';
+
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Row1_1 from './components/Row1_1';
@@ -10,9 +11,12 @@ import Row2_3 from './components/Row2_3';
 import Row3_1 from './components/Row3_1';
 import Row3_2 from './components/Row3_2';
 import Row3_3 from './components/Row3_3';
-
 import { BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Page1 from './Page1';
+import Page2 from './Page2';
+import Page3 from './Page3';
 
 function App() {
 
@@ -25,9 +29,7 @@ function App() {
   const handleButton3Click = () => {
     console.log('버튼 3이 클릭되었습니다.');
   };
-
   return (
-    // <<<<<<< HEAD
     <BrowserRouter>
       <section className="box">
         <header className="header_wrapper">
@@ -74,13 +76,23 @@ function App() {
             </div>
           </div>
 
-          {/* <div className='slidebar2'>
-            <Slidebar2 />
-          </div> */}
+          <Router>
+        <Sidebar
+          handleButton1Click={handleButton1Click}
+          handleButton2Click={handleButton2Click}
+          handleButton3Click={handleButton3Click}
+        />
+        <Routes>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/page1" component={Page1} />
+            <Route path="/page2" component={Page2} />
+            <Route path="/page3" component={Page3} />
+        </Routes>
+      </Router>
         </div>
 
 
-</section>
+    </section>
     </BrowserRouter>
   );
 }
