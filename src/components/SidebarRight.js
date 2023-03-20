@@ -13,7 +13,6 @@ const Arrow = styled.img.attrs({
   width: 14px;
   height: 14px;
   border-radius: 100%;
-  position: absolute;
   top: 20px;
   left: 10px;
 `;
@@ -28,9 +27,7 @@ const Setting = styled.img`
   width: 70px;
   height: 30px;
   border-radius: 100%;
-  position: absolute;
   top: 700px;
-  right: 10px;
 `;
 
 
@@ -38,9 +35,7 @@ const Logout = styled.img`
   width: 70px;
   height: 30px;
   border-radius: 100%;
-  position: absolute;
   top: 730px;
-  right: 10px;
 `;
 
 
@@ -61,7 +56,7 @@ const SmallBox = styled.div`
   width: 200px;
   height: 200px;
   border: 1px solid black;
-  margin-top: 10px;
+  margin-top: 5px;
   white-space: pre-wrap;
   padding: 5px;
   line-height: 30px;
@@ -76,10 +71,11 @@ const Icon = styled.img`
 `;
 
 const IconWrapper = styled.div`
+  text-align: left;
   display: flex;
   align-items: center;
   flex-direction: row;
-  align-items: left;
+  white-space: pre-wrap;
 `;
 
 function SidebarRight() {

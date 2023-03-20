@@ -1,35 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-<<<<<<< HEAD
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import SidebarLeft from './components/SidebarLeft';
-import SidebarRight from './components/SidebarRight';
-
-import Home from "./pages/Home";
-import ServiceUserManage from "./pages/ServiceUserManage";
-import ContentsManage from "./pages/ContentsManage";
-import PartnerMange from "./pages/PartnerMange";
-
-function App() {
-
-  return (
-    <div className="App">
-      
-        <BrowserRouter>
-          <SidebarRight></SidebarRight>
-          <SidebarLeft/>
-          <Routes>
-            <Route path="/" exact component={Home} />
-            <Route path="/ServiceUserManage" component={ServiceUserManage} />
-            <Route path="/ContentsManage" component={ContentsManage} />
-            <Route path="/PartnerMange" component={PartnerMange} />
-          </Routes>
-        </BrowserRouter>
-      
-        
-    </div>
-=======
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Row1_1 from './components/Row1_1';
@@ -40,9 +11,13 @@ import Row2_3 from './components/Row2_3';
 import Row3_1 from './components/Row3_1';
 import Row3_2 from './components/Row3_2';
 import Row3_3 from './components/Row3_3';
-
-import { BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SidebarLeft from './components/SidebarLeft';
+import SidebarRight from './components/SidebarRight';
+import Home from "./pages/Home";
+import ServiceUserManage from "./pages/ServiceUserManage";
+import ContentsManage from "./pages/ContentsManage";
+import PartnerMange from "./pages/PartnerMange";
 
 function App() {
 
@@ -57,21 +32,16 @@ function App() {
   };
 
   return (
-    // <<<<<<< HEAD
     <BrowserRouter>
+
       <section className="box">
         <header className="header_wrapper">
           <Header />
         </header>
         <div className='next_sidebar'>
           <aside className='sidebar_wrapper'>
-            <Sidebar
-              onButton1Click={handleButton1Click}
-              onButton2Click={handleButton2Click}
-              onButton3Click={handleButton3Click}
-            />
+          <SidebarLeft/>
           </aside>
-
           <div>
             <div className='content_row1'>
               <div className='side_margin'></div>
@@ -103,17 +73,37 @@ function App() {
               <div className='side_margin'></div>
             </div>
           </div>
+          <div className='sidebar2'>
+            <SidebarRight />
+          </div>
 
-          {/* <div className='slidebar2'>
-            <Slidebar2 />
-          </div> */}
+          {/* <SidebarLeft/>
+          <Routes>
+            <Route path="/" exact component={Home} />
+            <Route path="/ServiceUserManage" component={ServiceUserManage} />
+            <Route path="/ContentsManage" component={ContentsManage} />
+            <Route path="/PartnerMange" component={PartnerMange} />
+  </Routes> */}
+
         </div>
-
-
       </section>
     </BrowserRouter>
->>>>>>> fa3e3d36bad7d8f872a17bdfd16ecd95862b4894
+
+
+
+
+
+
   );
 }
 
 export default App;
+
+
+{/* <SidebarLeft/>
+            <Routes>
+              <Route path="/" exact component={Home} />
+              <Route path="/ServiceUserManage" component={ServiceUserManage} />
+              <Route path="/ContentsManage" component={ContentsManage} />
+              <Route path="/PartnerMange" component={PartnerMange} />
+            </Routes> */}

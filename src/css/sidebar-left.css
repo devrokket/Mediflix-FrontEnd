@@ -1,11 +1,9 @@
 .sidebar-left {
-    position: fixed;
-    left:20px;
-    top: 0;
-    width: 200px;
-    height: 100%;
+    width: 246px;
+    height: 978px;
     background-color: #fff;
     border-right: 1px solid #ccc;
+    margin: 0 auto;
   }
 
   .sidebar-left-item img {
