@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/sidebar-right.css";
+import "../assets/styles/sidebar-right.css";
 
 function SidebarRightItem({ menu, extra }) {
   return (

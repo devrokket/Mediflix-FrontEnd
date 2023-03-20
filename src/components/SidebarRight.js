@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/sidebar-right.css";
+import "../assets/styles/sidebar-right.css";
 import SidebarRightItem from "./SidebarRightItem";
 import profile from "../assets/imgs/profile.png";
 import styled from "styled-components";

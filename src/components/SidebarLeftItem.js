@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/sidebar-left-item.css";
+import "../assets/styles/sidebar-left-item.css";
 
 function SidebarLeftItem(props) {
   const { menu, isActive } = props;
