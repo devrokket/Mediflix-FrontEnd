@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/styles/sidebar-left.css";
 import { Link, useLocation } from "react-router-dom";
-import SidebarLeftItem from "./SidebarLeftItem"
+import SidebarLeftItem from "./SidebarLeftItem";
 import dashboardIcon from "../assets/imgs/dashboardicon.png";
 import userIcon from "../assets/imgs/serviceuser.png";
 import contentIcon from "../assets/imgs/contents.png";
