@@ -1,0 +1,65 @@
+.sidebar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 220px;
+    background-color: #f2eded;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.SmallBox .title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.SmallBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar-right-itme-extra {
+  flex: 1px;
+}
+
+.sidebar-right-item-extra-boxes {
+  display: flex;
+  margin-top: 8px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-right-item-extra-box {
+  width: 180px;
+  height: 50px;
+  margin-right: 8px;
+  background-color: #bfbfbf;
+  border-radius: 4px;
+  text-align: left;
+  padding: 5px;
+  font-size: 9px;
+}
+  .sidebar-right-item {
+    flex: 1px;
+    color: black;
+    text-align: center;
+  }
+
+  .sidebar-right-item
+
+  
+  .sidebar a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    color: #007bff;
+  }
+  
+  .sidebar .active {
+    color: black;
+
+  }

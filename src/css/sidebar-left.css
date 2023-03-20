@@ -1,0 +1,24 @@
+.sidebar-left {
+    position: fixed;
+    left:20px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+  }
+
+  .sidebar-left-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+  }
+
+.menu {
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    text-align: 50px;
+    padding: 30px;
+}
+
