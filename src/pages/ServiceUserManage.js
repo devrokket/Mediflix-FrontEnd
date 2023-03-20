@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Page1() {
+function ServiceUserManage() {
   return (
     <div>
       <h2>Page 1</h2>
@@ -9,4 +9,4 @@ function Page1() {
   );
 }
 
-export default Page1;
+export default ServiceUserManage;
