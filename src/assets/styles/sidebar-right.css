@@ -1,43 +1,26 @@
 .sidebar-right {
-    width: 220px;
-    height: 978px;
+    width: 200px;
+    height: 979px;
     background-color: #f2eded;
     border: 1px solid #ddd;
     padding: 10px;
-}
-.SmallBox .title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
+    transition: all 0.3s ease;
+
 }
 
-.SmallBox {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-
-.sidebar-right-item-extra-boxes {
-  display: flex;
-  margin-top: 8px;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sidebar-right-item-extra-box {
-  width: 180px;
-  height: 50px;
-  margin-right: 8px;
-  background-color: #bfbfbf;
-  border-radius: 4px;
-  text-align: left;
-  padding: 5px;
-  font-size: 9px;
-}
   .sidebar-right-item {
     flex: 1px;
     color: black;
     text-align: center;
   }
+  
+  .sidebar-right.open {
+    width: 50px;
+    padding-right: 10px;
+  }
+  
+  
+  
+  
+  
 
