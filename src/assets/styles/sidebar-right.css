@@ -1,10 +1,37 @@
 .sidebar-right {
-    width: 220px;
-    height: 978px;
-    background-color: #f2eded;
-    border: 1px solid #ddd;
-    padding: 10px;
+  width: 200px;
+  height: 979px;
+  background-color: #f2eded;
+  border: 1px solid #ddd;
+  padding: 10px;
+  transition: all 0.3s ease;
+
 }
+
+.sidebar-right-item {
+  flex: 1px;
+  color: black;
+  text-align: center;
+}
+
+.sidebar-right.open {
+  width: 50px;
+  padding-right: 10px;
+}
+
+
+
+
+
+
+.sidebar-right {
+  width: 220px;
+  height: 978px;
+  background-color: #f2eded;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
 .SmallBox .title {
   font-weight: bold;
   font-size: 1.2rem;
@@ -35,9 +62,9 @@
   padding: 5px;
   font-size: 9px;
 }
-  .sidebar-right-item {
-    flex: 1px;
-    color: black;
-    text-align: center;
-  }
 
+.sidebar-right-item {
+  flex: 1px;
+  color: black;
+  text-align: center;
+}

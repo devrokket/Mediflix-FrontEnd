@@ -1,5 +1,6 @@
 import "../assets/styles/Row3_3.css";
 import { Space, Switch } from 'antd';
+import BarChart from "./BarChart";
 
 export default function Row3_3() {
     return (
@@ -8,6 +9,7 @@ export default function Row3_3() {
                 <div className="row3_3_title">
                     <h3>지역별 비교</h3>
                 </div>
+                <div className="row3_3_subtitle">일간 접속 유저의 평균 시청기간</div>
                 <div className="scrollbutton">
                     <Space direction="vertical">
                         <Switch
@@ -19,8 +21,8 @@ export default function Row3_3() {
                 </div>
             </div>
             <div className="row3_3_content_2">
-                <div className='chart'>지도</div>
-                <div className='chart_text'>설명</div>
+                <div className='chart'><BarChart /></div>
+                {/* <div className='chart_text'>설명</div> */}
             </div>
         </div>
     );

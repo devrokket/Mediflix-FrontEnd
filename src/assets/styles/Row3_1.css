@@ -2,6 +2,8 @@
     display: flex;
     height: 100%;
     flex-direction: column;
+    background-color: #F6F6F6;
+    border-radius: 10px;
 }
 
 .row3_1_content_1 {
