@@ -1,5 +1,6 @@
 import "../assets/styles/Row2_1.css";
 import { LineOutlined } from "@ant-design/icons"
+import setting from "../assets/imgs/setting.png";
 
 export default function Row2_1() {
     return (
@@ -9,7 +10,7 @@ export default function Row2_1() {
                     <h3>서비스 규모 CHECK</h3>
                 </div>
                 <div className="row2_1_update">23.03.15. 업데이트</div>
-                <div className="row2_1_icon">icon</div>
+                <div className="row2_1_icon"><img src={setting}></img></div>
             </div>
             <div className="row2_1_content_2">
                 <div className="row2_1_box">

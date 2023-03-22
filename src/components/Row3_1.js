@@ -1,5 +1,6 @@
 import "../assets/styles/Row3_1.css";
 import { CaretUpOutlined, MinusOutlined } from "@ant-design/icons"
+import eye from "../assets/imgs/eye.png";
 
 export default function Row3_1() {
     return (
@@ -43,9 +44,9 @@ export default function Row3_1() {
                     <h3>LIFE 인기 게시글</h3>
                 </div>
                 <div className="row3_1_line">
-                    <div className="list">1. [카테고리] [제목명] <div>216</div></div>
-                    <div className="list">2. [카테고리] [제목명] <div>216</div></div>
-                    <div className="list">3. [카테고리] [제목명] <div>216</div></div>
+                    <div className="list">1. [행사] 공중보건의사협의회 공청회 현장스케치 <div><img src={eye} />216</div></div>
+                    <div className="list">2. [푸드] 강동병원 근처 맛집지도 <div><img src={eye} />170</div></div>
+                    <div className="list">3. [스포츠] 라운딩 즐겨하시는 분 정보 공유해요 <div><img src={eye} />125</div></div>
                 </div>
             </div>
         </div>

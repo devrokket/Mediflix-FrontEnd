@@ -1,4 +1,5 @@
-import logo from "../assets/imgs/mediflix_white.png";
+import mediflix from "../assets/imgs/mediflix.png";
+import logo from "../assets/imgs/logo.png";
 import "../assets/styles/Header.css";
 import "../App.css";
 import { RightOutlined } from "@ant-design/icons"
@@ -8,6 +9,7 @@ export default function Header() {
         <header className="header">
             <div className="title">
                 <img src={logo} className="logo"></img>
+                <img src={mediflix} className="medi_title"></img>
             </div>
             <nav className="nav">
                 <ul className="nav__list">

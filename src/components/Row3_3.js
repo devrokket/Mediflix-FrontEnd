@@ -9,7 +9,7 @@ export default function Row3_3() {
                 <div className="row3_3_title">
                     <h3>지역별 비교</h3>
                 </div>
-                <div className="row3_3_subtitle">일간 접속 유저의 평균 시청기간</div>
+                {/* <div className="row3_3_subtitle">일간 접속 유저의 평균 시청기간</div> */}
                 <div className="scrollbutton">
                     <Space direction="vertical">
                         <Switch
