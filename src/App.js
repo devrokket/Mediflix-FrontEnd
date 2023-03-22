@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+import { createGlobalStyle } from 'styled-components';
 
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
 import Row1_1 from './components/Row1_1';
 import Row1_2 from './components/Row1_2';
 import Row2_1 from './components/Row2_1';
@@ -18,19 +18,9 @@ import Home from "./pages/Home";
 import ServiceUserManage from "./pages/ServiceUserManage";
 import ContentsManage from "./pages/ContentsManage";
 import PartnerMange from "./pages/PartnerMange";
+import TodoList from './components/TodoList';
 
 function App() {
-
-  const handleButton1Click = () => {
-    console.log('버튼 1이 클릭되었습니다.');
-  };
-  const handleButton2Click = () => {
-    console.log('버튼 2가 클릭되었습니다.');
-  };
-  const handleButton3Click = () => {
-    console.log('버튼 3이 클릭되었습니다.');
-  };
-
   return (
     <BrowserRouter>
 
@@ -51,7 +41,6 @@ function App() {
               </div>
               <div className='side_margin'></div>
             </div>
-
             <div className='content_row2'>
               <div className='side_margin'></div>
               <div className='row1_wrap'>
@@ -68,24 +57,15 @@ function App() {
                 <div className='row3_1'><Row3_1 /></div>
                 <div className='row3_2'><Row3_2 /></div>
                 <div className='row3_3'><Row3_3 /></div>
-                {/* <div className='row3_4'>임시 박스</div> */}
               </div>
               <div className='side_margin'></div>
             </div>
           </div>
           <div className='sidebar2'>
-            <SidebarRight />
+            <aside className='sidebar_wrapper'>
+              <SidebarRight />
+            </aside>
           </div>
-
-          {/* <SidebarLeft /> */}
-
-          {/* <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/ServiceUserManage" element={<ServiceUserManage />} />
-            <Route path="/ContentsManage" element={<ContentsManage />} />
-            <Route path="/PartnerMange" element={<PartnerMange />} />
-          </Routes> */}
-
         </div>
       </section>
     </BrowserRouter>
@@ -99,6 +79,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 {/* <SidebarLeft/>

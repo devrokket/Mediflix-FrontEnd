@@ -1,59 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+// ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
-const DoughnutChart = () => {
-    const [chartData, setChartData] = useState({});
+// const data1 = {
+//     labels: ['신경의학과', '피부과', '내과', '산부인과', '그 외'],
+//     datasets: [
+//         {
+//             label: '%',
+//             data: [12, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 '#FF0000',
+//                 '#FA7B7B',
+//                 '#D9D9D9',
+//                 '#F9ACAC',
+//                 '#FFFFFF',
+//             ],
+//             borderColor: [
+//                 'gray'
+//             ],
+//             borderWidth: 0.2,
+//             cutout: "80%"
+//         },
+//     ],
+// };
 
-    useEffect(() => {
-        const data = {
-            labels: ['Red', 'Blue', 'Yellow'],
-            datasets: [
-                {
-                    label: '# of Votes',
-                    data: [12, 19, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                    ],
-                    borderWidth: 1,
-                },
-            ],
-        };
+// const options = {
+//     plugins: {
+//         legend: { //범례 스타일링
+//             display: true,
+//             labels: {
+//                 color: 'black',
+//                 usePointStyle: true,
+//                 font: {
+//                     size: 10,
+//                 }
+//             }
+//         },
+//         title: {
+//             position: 'bottom',
+//             display: 'true',
+//             text: 'MEDIFLIX 회원의 전공별 분포',
+//             color: 'black',
+//             padding: {
+//                 bottom: 0,
+//                 top: 10
+//             }
+//         }
+//     }
+// }
 
-        const options = {
-            plugins: {
-                legend: {
-                    display: false,
-                },
-            },
-        };
-
-        // 이전 차트 제거
-        const canvas = document.getElementById('myChart');
-        const context = canvas.getContext('2d');
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        const oldChart = canvas.chart;
-        if (oldChart) {
-            oldChart.destroy();
-        }
-
-        // 새로운 차트 생성
-        const newChart = new Doughnut(canvas, {
-            data: data,
-            options: options,
-        });
-        canvas.chart = newChart;
-
-        setChartData(data);
-    }, []);
-
-    return <canvas id="myChart" />;
-};
-
-export default DoughnutChart;
+export default function DoughnutChart({ data, option }) {
+    return <Doughnut data={data} options={option} />;
+}

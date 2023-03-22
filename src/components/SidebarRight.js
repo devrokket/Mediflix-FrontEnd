@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import "../assets/styles/sidebar-right.css";
 import SidebarRightItem from "./SidebarRightItem";
+import TodoList from "./TodoList";
 import profile from "../assets/imgs/profile.png";
 import styled from "styled-components";
 import setting from "../assets/imgs/settingbutton.png";
 import logout from "../assets/imgs/logout.png";
 import arrow from "../assets/imgs/arrow.png";
 
-const Arrow = styled.img.attrs({
-  onClick: props => props.onClick
-})`
+const Arrow = styled.img`
   width: 14px;
   height: 14px;
   border-radius: 100%;
   top: 20px;
   left: 10px;
+  cursor: pointer; 
 `;
 
 const Profile = styled.img`
@@ -50,17 +50,12 @@ const MenuWrapper = styled.div`
 
 const SmallBox = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 200px;
+  border-radius: 10px;
+  background-color: white;
+  width: 207px;
   height: 200px;
-  border: 1px solid black;
   margin-top: 5px;
-  white-space: pre-wrap;
   padding: 5px;
-  line-height: 30px;
-  text-align: left;
   flex-wrap: wrap;
 `;
 
@@ -71,76 +66,83 @@ const Icon = styled.img`
 `;
 
 const IconWrapper = styled.div`
-  text-align: left;
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  white-space: pre-wrap;
 `;
 
 function SidebarRight() {
-  const [isOpen, setIsOpen] = useState(false);
+  // 참고 코드 시작
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-  
+  function handleToggleClick() {
+    setIsExpanded(!isExpanded);
+  }
+
+  function handleLinkClick() {
+    setIsExpanded(false);
+  }
+
+  function handleCollapseClick(e) {
+    e.preventDefault();
+    e.currentTarget.classList.toggle('showCollapse');
+    e.currentTarget.previousElementSibling.classList.toggle('rotate');
+  }
+
+  // 참고 코드 끝
+
   const menus = [
     { name: "나의 프로필", extra: <Profile src={profile} alt="Profile" /> },
-    { name: "", extra: 
-    <SmallBox>
-      <div className="title">관리자 목록</div><br/>
-      <IconWrapper>
-        <Icon src={profile} alt="icon1" />
-        <div>박세은 / 주임</div>
-      </IconWrapper>
-      <IconWrapper>
-        <Icon src={profile} alt="icon2" />
-        <div>강은영 / 팀장</div>
-      </IconWrapper>
-      <IconWrapper>
-        <Icon src={profile} alt="icon3" />
-        <div>손현석 / 주임</div>
-      </IconWrapper>
-      <IconWrapper>
-        <Icon src={profile} alt="icon4" />
-        <div>이지수 / 주임</div>
-      </IconWrapper>
-  </SmallBox>
-     },
     {
-       name: "업무보드",
-       extra: (
-        <div className="sidebar-right-item-extra-boxes">
-          <div className="sidebar-right-item-extra-box">직전주 LIFE 신규 게시글 리뷰하기</div>
-          <div className="sidebar-right-item-extra-box">1분기 페이지 이탈률 정리 후 보고</div>
-          <div className="sidebar-right-item-extra-box">ONAIR 콘텐츠 실시간 모니터링 보고서 작성</div>
-          <div>지난 업무보드 히스토리 보러가기</div>
+      name: "", extra:
+        <SmallBox>
+          <IconWrapper>
+            <Icon src={profile} alt="icon1" />
+            <div>박세은 / 주임</div>
+          </IconWrapper>
+          <IconWrapper>
+            <Icon src={profile} alt="icon2" />
+            <div>강은영 / 팀장</div>
+          </IconWrapper>
+          <IconWrapper>
+            <Icon src={profile} alt="icon3" />
+            <div>손현석 / 주임</div>
+          </IconWrapper>
+          <IconWrapper>
+            <Icon src={profile} alt="icon4" />
+            <div>이지수 / 주임</div>
+          </IconWrapper>
+        </SmallBox>
+    },
+    {
+      name: "업무보드",
+      extra: (
+        <div className="TodoList">
+          <TodoList />
         </div>
+
       ),
-     }
+    }
   ];
 
   return (
     <div className="sidebar-right">
-      <Arrow src={arrow} alt="Arrow" onClick={toggleSidebar} />
+      <Arrow src={arrow} alt="Arrow" />
       <MenuWrapper>
         {menus.map((menu, index) => {
           return (
             <SidebarRightItem
               key={index}
               menu={menu}
-              isActive={isOpen}
-              extra={menu.extra} 
+              extra={menu.extra}
             />
-            
+
           );
         })}
       </MenuWrapper>
-      <Setting src={setting} alt="Setting" /><br/>
-      <Logout src={logout} alt="Logout" /> 
+      <Setting src={setting} alt="Setting" /><br />
+      <Logout src={logout} alt="Logout" />
     </div>
   );
 }
 
 export default SidebarRight;
+

@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-color: #F6F6F6;
+    border-radius: 10px;
 }
 
 .row3_3_content_1 {
@@ -23,18 +25,27 @@
     margin-left: 17px;
 }
 
+.row3_3_subtitle {
+    margin-right: 70px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
 .scrollbutton {
     padding-right: 17px;
 }
 
 .row3_3_content_2 .chart {
-    width: 50%;
+    width: 100%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.row3_3_content_2 .chart_text {
+/* .row3_3_content_2 .chart_text {
     width: 50%;
     height: 100%;
     border: 1px solid black;
-}
+} */
