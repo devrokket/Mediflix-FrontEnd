@@ -5,7 +5,7 @@ import SidebarLeftItem from "./SidebarLeftItem";
 import dashboardIcon from "../assets/imgs/dashboardicon.png";
 import userIcon from "../assets/imgs/userIcon.png";
 import contentIcon from "../assets/imgs/contentIcon.png";
-import blackIcon from "../assets/imgs/blackIcon.png";
+import blackIcon from "../assets/imgs/blackicon.png";
 
 
 
