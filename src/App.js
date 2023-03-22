@@ -20,6 +20,8 @@ import ContentsManage from "./pages/ContentsManage";
 import PartnerMange from "./pages/PartnerMange";
 import TodoList from './components/TodoList';
 
+const API = "http://13.124.122.107:8080/logs?selectDate=2023-03-24T06:02:24";
+
 function App() {
   return (
     <BrowserRouter>
@@ -63,7 +65,7 @@ function App() {
           </div>
           <div className='sidebar2'>
             <aside className='sidebar_wrapper'>
-              <SidebarRight />
+              {/* <SidebarRight /> */}
             </aside>
           </div>
         </div>

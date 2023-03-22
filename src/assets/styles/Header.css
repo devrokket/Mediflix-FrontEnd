@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid #ccc;
     background-color: white;
 }
 
@@ -27,8 +27,11 @@ body {
 }
 
 .logo {
-    width: 250px;
     margin-left: 34px;
+}
+
+.medi_title {
+    margin-left: 10px;
 }
 
 .nav {

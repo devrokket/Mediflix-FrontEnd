@@ -16,7 +16,7 @@
 
 .row3_1_content_2 {
     display: flex;
-    border-bottom: 2px solid gray;
+    border-bottom: 3px solid gray;
     height: 45%;
     justify-content: center;
 }
@@ -42,6 +42,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .row3_1_line .list {

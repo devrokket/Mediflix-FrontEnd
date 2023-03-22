@@ -31,11 +31,11 @@
 }
 
 .row2_1_icon {
-    margin-right: 17px;
+    margin-left: 35px;
 }
 
 .row2_1_box {
-    border: 1px solid black;
+    border: 3px solid red;
     border-radius: 10px;
     height: 80%;
     width: 22%;
