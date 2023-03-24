@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import profile from '../assets/imgs/profile.png';
 
 const SmallBoxWrapper = styled.div`
-    width: 230px;
-    height: 297px;
+  width: 230px;
+  height: 297px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -35,6 +35,13 @@ const CheckCircle = styled.div`
   margin-left: auto;
 `;
 
+const ManagerBoxName = styled.div`
+  margin-left: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+`
+
 const OnOffline = styled.div`
     display: flex;
     margin-left: 30px;
@@ -45,7 +52,9 @@ const OnOffline = styled.div`
 function SmallBox() {
   return (
     <SmallBoxWrapper>
-      <b>관리자 목록</b>
+      <ManagerBoxName>
+      <div>관리자 목록</div>
+      </ManagerBoxName>
       <IconWrapper>
         <Icon src={profile} alt="icon1" />
         <div>박세은 / 주임</div>

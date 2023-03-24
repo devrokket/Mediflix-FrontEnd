@@ -18,7 +18,7 @@ import ManagerBox from "./ManagerBox";
 
 const BottomBlock = styled.div`
   font-size: 20px;
-  margin-top: 250px;
+  margin-top: 260px;
   margin-right:
   padding: 50px;
   algign-items: center;
@@ -27,12 +27,19 @@ const BottomBlock = styled.div`
 const ThreeIcons = styled.div`
   font-size: 35px;
   margin-top: 380px;
-  display: fixed;
+  display: inline-block;
   align-items: center;
   & > * {
     margin-bottom: 50px;
   }
 `;
+
+const TodoKey = styled.div`
+padding-top: 700px;
+font-weight: bold;
+margin-left: 12px;
+font-size: 16px;
+`
 
 
 function SidebarRight() {
@@ -62,11 +69,9 @@ function SidebarRight() {
 
           <div className="sidebar-position">
             <span>
-              <b>나의 프로필</b>
+              <div className="profile-title">나의 프로필</div>
             <MyProfile/>
             </span>
-            
-            
           </div>
           
           <div className="sidebar-position">
@@ -77,7 +82,10 @@ function SidebarRight() {
 
           <div className="sidebar-position">
             <span>
-              <TodoList/>         
+              <TodoKey>
+              <div>업무보드</div>
+              </TodoKey>
+              <TodoList/>    
             </span>
           </div>
           <BottomBlock>

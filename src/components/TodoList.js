@@ -4,10 +4,12 @@ import TodoItem from "./TodoItem";
 import plusButton from "../assets/imgs/plusbutton.png";
  
 const TodoListBlock = styled.div`
-  margin-top: 350px;
+  margin-bottom: 330px;
+  padding-bottom: 5px;
 `;
 
 const TodoItemBox = styled.div`
+  margin-top: 12px;
   margin-bottom: 10px;
   border-radius: 16px;
   width: 220px;
@@ -24,17 +26,10 @@ const PlusButton = styled.img`
   margin-top: 27px;
 `;
 
-const TodoName = styled.div`
- margin-bottom: 20px;
- margin-top: 100px;
-`
 
 function TodoList() {
     return (
         <TodoListBlock>
-         <TodoName>
-            <div style={{ fontWeight: 'bold'}}>업무보드</div>
-         </TodoName>
             <TodoItemBox>
                 <TodoItem text1="[LIFE 실시간 인기 게시글]"
                 text2="직전주 LIFE 신규 게시글 리뷰하기" done={false} />

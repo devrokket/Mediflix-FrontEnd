@@ -25,7 +25,7 @@
     width: 95px;
     height: 979px;
     background-color: #F2F2F2;
-    transition: width 0.4ns ease;
+    transition: width 0.4s ease;
     padding-top: 15px;
     border-radius: 15px;
     z-index: 1;
@@ -42,8 +42,17 @@
     padding-bottom: 50px;
   }
 
-  .sidebar-position .be
-  
+.sidebar .sidebar-position .abcd {
+ padding-top: 700px;
+ font-weight: bold;
+ margin-left: 12px;
+ font-size: 16px;
+}  
+
+.sidebar .sidebar-position .profile-title {
+  font-weight: bold;
+  font-size: 21px;
+}
 
 
   .sidebar .below {
@@ -66,7 +75,7 @@
     width: 220px;
     height: 0;
     padding: 0 12px;
-    transition: width 0.3s ease;
+    transition: width 0.4s ease;
     color: #000000;
     text-transform: uppercase;
     white-space: nowrap;
@@ -76,7 +85,7 @@
   
   .sidebar--open {
     width: 278px;
-    transition: width 0.3s ease;
+    transition: width 0.4s ease;
   }
   
   .sidebar--open .sidebar-position span {
@@ -86,17 +95,13 @@
   }
   
   .trigger {
-    height: 50px;
+    height: 40px;
     font-size: 24px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 0 12px;
   }
-
-.todo-list {
-  bottom: 0;
-}
   
   
