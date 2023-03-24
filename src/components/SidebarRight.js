@@ -30,7 +30,7 @@ const ThreeIcons = styled.div`
   display: fixed;
   align-items: center;
   & > * {
-    margin-bottom: 50px;  /* 아이콘 간격 조정 */
+    margin-bottom: 50px;
   }
 `;
 
