@@ -1,14 +1,14 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { MdDone } from 'react-icons/md';
- 
+// import { MdDone } from 'react-icons/md';
+
 const TodoItemBlock = styled.div`
     display: flex;
     align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
 `;
- 
+
 const CheckCircle = styled.div`
     width: 14px;
     height: 14px;
@@ -28,13 +28,13 @@ const CheckCircle = styled.div`
             background-color: red;
         `}
 `;
- 
+
 const Text = styled.div`
     flex: 1;
     font-size: 14px;
     color: #495057;
 `;
- 
+
 function TodoItem({ text, done }) {
     return (
         <TodoItemBlock>
@@ -43,5 +43,5 @@ function TodoItem({ text, done }) {
         </TodoItemBlock>
     );
 }
- 
+
 export default TodoItem;

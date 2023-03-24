@@ -1,6 +1,7 @@
 import "../assets/styles/Row2_3.css";
 import { ClockCircleOutlined } from '@ant-design/icons';
 import { Avatar, Badge, Space } from 'antd';
+import OnAir from "../assets/imgs/OnAir.png";
 
 export default function Row2_3() {
     return (
@@ -16,7 +17,7 @@ export default function Row2_3() {
 
             <div className="row2_3_content_2">
                 <div className="image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCsbodRFzaMqbJzhqDeMlz0rFbnVfXmVcjTzwt9Mhq&s" />
+                    <img src={OnAir} />
                 </div>
                 <div className="live">Live</div>
             </div>
