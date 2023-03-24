@@ -8,7 +8,6 @@ import {
   faCog,
   faSignOut,
   faBook,
-  faListCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../assets/styles/TestSidebar.css";
@@ -18,20 +17,23 @@ import MyProfile from "./MyProfile";
 import ManagerBox from "./ManagerBox";
 
 const BottomBlock = styled.div`
-  margin-top: 200px;
+  font-size: 25px;
+  margin-top: 250px;
+  margin-right:
   padding: 50px;
   algign-items: center;
 `
 const ClosedIcons = styled.div`
-  margin-top: 170px;
+  margin-top: 183px;
 `
 
 const ThreeIcons = styled.div`
-  font-size: 30px;
-  letter-spacing: 40px;
+  font-size: 40px;
   margin-top: 30px;
   margin-bottom: 20px;
-`
+  display: fixed;
+  align-items: center;
+`;
 function TestSidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -80,7 +82,7 @@ function TestSidebar() {
             </span>
           </div>
           <BottomBlock>
-            <FontAwesomeIcon icon={faCog} text="설정" />
+            <FontAwesomeIcon icon={faCog} />
             <FontAwesomeIcon icon={faSignOut} />
           </BottomBlock>
         </div>

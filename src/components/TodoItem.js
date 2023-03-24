@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
+
 
 const TodoItemBlock = styled.div`
     display: flex;
@@ -13,7 +14,7 @@ const TodoItemBlock = styled.div`
 const CheckCircle = styled.div`
     width: 14px;
     height: 14px;
-    border-radius: 32px;
+    border-radius: 50%;
     border: 1px solid #999999;
     align-items: center;
     justify-content: center;
@@ -44,13 +45,21 @@ const TextBlock = styled.div`
 `
 
 function TodoItem({ done, text1, text2 }) {
+    const [isDone, setIsDone] = useState(done);
+
+    const onClickCheckCircle = () => {
+        setIsDone(!isDone);
+    };
+
     return (
         <TodoItemBlock>
             <TextBlock>
             <Text>{text1}</Text>
             <Text2>{text2}</Text2>
             </TextBlock>
-            <CheckCircle done={done}>{done}</CheckCircle>
+            <CheckCircle done={isDone} onClick={onClickCheckCircle}>
+                {isDone}
+            </CheckCircle>
         </TodoItemBlock>
     );
 }
