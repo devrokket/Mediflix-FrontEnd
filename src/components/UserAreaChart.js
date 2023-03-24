@@ -1,5 +1,5 @@
 import React from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import { AreaChart, Area, XAxis, CartesianGrid, Tooltip } from 'recharts';
 
 const data = [
   { name: '7일전', '페이지 방문 횟수': 123, '접속 유저 수': 78, '시청 완주 수': 20 },
@@ -14,7 +14,7 @@ const data = [
 
 function UserAreaChart() {
   return (
-    <AreaChart width={800} height={200} data={data}
+    <AreaChart width={800} height={210} data={data}
       margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />

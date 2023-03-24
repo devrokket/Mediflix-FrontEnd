@@ -7,34 +7,35 @@ import {
   faTimes,
   faCog,
   faSignOut,
-  faBook,
+  faNoteSticky,
 } from "@fortawesome/free-solid-svg-icons";
 
-import "../assets/styles/TestSidebar.css";
+import "../assets/styles/SidebarRight.css";
 import TodoList from "./TodoList";
 import styled from 'styled-components';
 import MyProfile from "./MyProfile";
 import ManagerBox from "./ManagerBox";
 
 const BottomBlock = styled.div`
-  font-size: 25px;
+  font-size: 20px;
   margin-top: 250px;
   margin-right:
   padding: 50px;
   algign-items: center;
 `
-const ClosedIcons = styled.div`
-  margin-top: 183px;
-`
 
 const ThreeIcons = styled.div`
-  font-size: 40px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  font-size: 35px;
+  margin-top: 380px;
   display: fixed;
   align-items: center;
+  & > * {
+    margin-bottom: 50px;  /* 아이콘 간격 조정 */
+  }
 `;
-function TestSidebar() {
+
+
+function SidebarRight() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleTrigger = () => setIsOpen(!isOpen);
@@ -49,14 +50,12 @@ function TestSidebar() {
               <FontAwesomeIcon icon={faTimes} />
             ) : (
               <>
-                <ClosedIcons>
-                <FontAwesomeIcon icon={faBars} />
                 <ThreeIcons>
-                <FontAwesomeIcon icon={faUser} />
-                <FontAwesomeIcon icon={faUsers} />
-                <FontAwesomeIcon icon={faBook} />
-                </ThreeIcons>
-                </ClosedIcons>
+                  <FontAwesomeIcon icon={faBars} />
+                  <FontAwesomeIcon icon={faUser} />
+                  <FontAwesomeIcon icon={faUsers}/>
+                  <FontAwesomeIcon icon={faNoteSticky} />
+                </ThreeIcons> 
               </>
             )}
           </div>
@@ -92,4 +91,4 @@ function TestSidebar() {
   );
 }
 
-export default TestSidebar;
+export default SidebarRight;
