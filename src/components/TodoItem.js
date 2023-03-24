@@ -10,8 +10,8 @@ const TodoItemBlock = styled.div`
 `;
  
 const CheckCircle = styled.div`
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     border-radius: 16px;
     border: 1px solid #ced4da;
     font-size: 24px;

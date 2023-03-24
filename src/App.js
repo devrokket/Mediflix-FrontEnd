@@ -14,11 +14,6 @@ import Row3_3 from './components/Row3_3';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SidebarLeft from './components/SidebarLeft';
 import SidebarRight from './components/SidebarRight';
-import Home from "./pages/Home";
-import ServiceUserManage from "./pages/ServiceUserManage";
-import ContentsManage from "./pages/ContentsManage";
-import PartnerMange from "./pages/PartnerMange";
-import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -29,7 +24,7 @@ function App() {
         </header>
         <div className='next_sidebar'>
           <aside className='sidebar_wrapper'>
-          <SidebarLeft/>
+           <SidebarLeft/>
           </aside>
           <div>
             <div className='content_row1'>
@@ -61,8 +56,8 @@ function App() {
             </div>
           </div>
           <div className='sidebar2'>
-          <aside className='sidebar_wrapper'>
-            <SidebarRight />
+          <aside className='sidebar_wrapper2'>
+            <SidebarRight/>
           </aside>
           </div>
         </div>

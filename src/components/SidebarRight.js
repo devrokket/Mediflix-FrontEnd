@@ -3,24 +3,15 @@ import "../assets/styles/sidebar-right.css";
 import SidebarRightItem from "./SidebarRightItem";
 import TodoList from "./TodoList";
 import profile from "../assets/imgs/profile.png";
-import styled from "styled-components";
 import setting from "../assets/imgs/settingbutton.png";
 import logout from "../assets/imgs/logout.png";
-import arrow from "../assets/imgs/arrow.png";
-
-const Arrow = styled.img`
-  width: 14px;
-  height: 14px;
-  border-radius: 100%;
-  top: 20px;
-  left: 10px;
-  cursor: pointer; 
-`;
+import styled from 'styled-components';
 
 const Profile = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  font-size: 50px;
 `;
 
 const Setting = styled.img`
@@ -38,6 +29,20 @@ const Logout = styled.img`
   top: 730px;
 `;
 
+const CheckCircle = styled.div`
+    width: 12px;
+    height: 12px;
+    border-radius: 16px;
+    border: 1px solid #ced4da;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    background-color: #FF0000;
+
+`
+
 
 
 const MenuWrapper = styled.div`
@@ -49,99 +54,82 @@ const MenuWrapper = styled.div`
 `;
 
 const SmallBox = styled.div`
-  display: flex;
+  display: absolute;
   border-radius: 10px;
   background-color: white;
-  width: 207px;
-  height: 200px;
+  width: 230px;
+  height: 297px;
   margin-top: 5px;
   padding: 5px;
   flex-wrap: wrap;
 `;
 
 const Icon = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 42px;
+  height: 42px;
   margin-right: 10px;
+  margin-bottom: 25px;
 `;
 
 const IconWrapper = styled.div`
   display: flex;
+  margin: 8px;
 `;
 
+const ProfileWrapper = styled.div`
+  display: flex;
+  font-size: 17px;
+  algign-items
+  padding: 50px;
+`
+
 function SidebarRight() {  
-  // 참고 코드 시작
-  const [isExpanded, setIsExpanded] = useState(false);
-  
-  function handleToggleClick() {
-    setIsExpanded(!isExpanded);
-  }
-  
-  function handleLinkClick() {
-    setIsExpanded(false);
-  }
-  
-  function handleCollapseClick(e) {
-    e.preventDefault();
-    e.currentTarget.classList.toggle('showCollapse');
-    e.currentTarget.previousElementSibling.classList.toggle('rotate');
-  }
+  return (
+    <div className="sidebar-right">
+      <div className="my-profile">나의 프로필</div>
 
-  // 참고 코드 끝
+      <ProfileWrapper>
+        <Profile src={profile}/> 
+        <div>최현아/주임</div>
+      </ProfileWrapper>
+    
+      
+            
+      
 
-  const menus = [
-    { name: "나의 프로필", extra: <Profile src={profile} alt="Profile" /> },
-    { name: "", extra: 
-    <SmallBox>
-      <div>ddd</div>
+      <SmallBox>
+      <b>관리자 목록</b>
       <IconWrapper>
         <Icon src={profile} alt="icon1" />
         <div>박세은 / 주임</div>
+        <CheckCircle/>
       </IconWrapper>
+      
       <IconWrapper>
         <Icon src={profile} alt="icon2" />
         <div>강은영 / 팀장</div>
+        <CheckCircle/>
       </IconWrapper>
       <IconWrapper>
         <Icon src={profile} alt="icon3" />
         <div>손현석 / 주임</div>
+        <div>30분전</div>
       </IconWrapper>
       <IconWrapper>
         <Icon src={profile} alt="icon4" />
         <div>이지수 / 주임</div>
+        <div>10분전</div>
       </IconWrapper>
-  </SmallBox>
-     },
-    {
-       name: "업무보드",
-       extra: (
-        <div className="TodoList">
-          <TodoList />
-        </div>
-        
-      ),
-     }
-  ];
+    </SmallBox>
+    <TodoList/>
+      
+    <Setting src={setting} alt="Setting" /><br/>
+    <Logout src={logout} alt="Logout" /> 
 
-  return (
-    <div className="sidebar-right">
-      <Arrow src={arrow} alt="Arrow" />
-      <MenuWrapper>
-        {menus.map((menu, index) => {
-          return (
-            <SidebarRightItem
-              key={index}
-              menu={menu}
-              extra={menu.extra} 
-            />
-            
-          );
-        })}
-      </MenuWrapper>
-      <Setting src={setting} alt="Setting" /><br/>
-      <Logout src={logout} alt="Logout" /> 
     </div>
+    
   );
 }
 
 export default SidebarRight;
+
