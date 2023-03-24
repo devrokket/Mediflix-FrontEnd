@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   body {
-    width: 95vw;
+    width: 100vw;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -21,49 +21,48 @@
   
   .sidebar {
     position: absolute;
-    top: auto;
-    right: 140px;
+    right: 150px;
     width: 95px;
     height: 979px;
     background-color: #F2F2F2;
     transition: width 0.3s ease;
-    border-right: 1px #4d606e solid;
     padding-top: 15px;
+    border-radius: 15px;
   }
   
   .sidebar .sidebar-position {
-    height: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 50px 12px;
-    text-align: left;
-  }
-  
-  .sidebar .sidebar-position:hover {
-    background-color: #3f5159;
-    border-right: 5px #e84a5f solid;
-  }
-
-  .sidebar .below {
-    height: 50px;
+    height: 200px;
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 0px 12px;
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+  }
+  
+
+
+  .sidebar .below {
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    align-items: center;
     text-align: right;
-    bottom: 0;
+    flex-direction: column;
+    padding-top: 100px;
+    margin-left: 150px;
   }
   
   .sidebar svg {
-    color: #e84a5f;
+    color: #A6A6A6;
     min-width: 50px;
   }
   
   .sidebar span {
-    width: 0;
+    width: 220px;
     height: 0;
-    padding: 0 15px;
+    padding: 0 12px;
     transition: width 0.3s ease;
     color: #000000;
     text-transform: uppercase;
@@ -78,9 +77,9 @@
   }
   
   .sidebar--open .sidebar-position span {
-    /* display: block;
+    display: block;
     width: 100%;
-    height: auto; */
+    height: auto;
   }
   
   .trigger {
@@ -90,9 +89,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 12px 15px;
+    padding: 0 12px;
   }
+
+.todo-list {
+  bottom: 0;
+}
   
-  .test {
-    top: 0;
-  }
+  

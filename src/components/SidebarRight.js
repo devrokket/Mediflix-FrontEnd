@@ -7,6 +7,7 @@ import setting from "../assets/imgs/settingbutton.png";
 import logout from "../assets/imgs/logout.png";
 import styled from 'styled-components';
 
+
 const Profile = styled.img`
   width: 50px;
   height: 50px;
@@ -84,6 +85,10 @@ const ProfileWrapper = styled.div`
 `
 
 function SidebarRight() {  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleTrigger = () => setIsOpen(!isOpen);
+
   return (
     <div className="sidebar-right">
       <div className="my-profile">나의 프로필</div>

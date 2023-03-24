@@ -11,7 +11,6 @@ import Row3_2 from './Row3_2';
 import Row3_3 from './Row3_3';
 import SidebarLeft from './SidebarLeft';
 import SidebarRight from './SidebarRight';
-import TodoList from './TodoList';
 import TestSidebar from './TestSidebar';
 
 const API = "http://13.124.122.107:8080/logs?selectDate=2023-03-24T06:02:24";

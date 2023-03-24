@@ -3,17 +3,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faTimes,
-  faCogs,
-  faTable,
-  faList,
-  faUser,
   faCog,
   faSignOut,
-  faSignOutAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../assets/styles/TestSidebar.css";
+import TodoList from "./TodoList";
+import styled from 'styled-components';
+import MyProfile from "./MyProfile";
+import ManagerBox from "./ManagerBox";
 
+const BottomBlock = styled.div`
+  margin-top: 200px;
+  padding: 50px;
+  algign-items: center;
+`
 function TestSidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,40 +27,35 @@ function TestSidebar() {
     <div className="App">
       <div className="page">
 
-        <div className={`sidebar ${isOpen ? "sidebar--open" : "test"}`}>
+        <div className={`sidebar ${isOpen ? "sidebar--open" : ""}`}>
           <div className="trigger" onClick={handleTrigger}>
             <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
           </div>
 
           <div className="sidebar-position">
-            <FontAwesomeIcon icon={faUser} />
             <span>
-                hello
+              <b>나의 프로필</b>
+            <MyProfile/>
             </span>
             
+            
           </div>
+          
           <div className="sidebar-position">
-            <FontAwesomeIcon icon={faCogs} />
-            <span>Menu item 2</span>
-          </div>
-          <div className="sidebar-position">
-            <FontAwesomeIcon icon={faTable} />
-            <span>Menu item 3</span>
+            <span>   
+              <ManagerBox/>
+            </span>
           </div>
 
           <div className="sidebar-position">
-            <FontAwesomeIcon icon={faList} />
-            <span>Position 4</span>
+            <span>
+              <TodoList/>         
+            </span>
           </div>
-            <div className="below">
-            <FontAwesomeIcon icon={faCog} />
-            <span>설정</span>
-          </div>
-          <div className="below">
+          <BottomBlock>
+            <FontAwesomeIcon icon={faCog} text="설정" />
             <FontAwesomeIcon icon={faSignOut} />
-            <span>로그아웃</span>
-          </div>
-          
+          </BottomBlock>
         </div>
       </div>
     </div>
