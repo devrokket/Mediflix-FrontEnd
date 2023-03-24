@@ -16,7 +16,7 @@
 }
 
 .row1_1_content_2 {
-    background-color: darkgray;
+    background-color: #F5F5F5;
     border-radius: 10px;
     height: 100%;
 }
@@ -29,7 +29,7 @@
     height: fit-content;
     border-radius: 10px;
     font-size: 10px;
-    margin-top: 20px;
+    margin-top: 3px;
 }
 
 .row1_1_graph_text {
@@ -45,4 +45,16 @@
 
 .row1_1_graph_text ul li {
     list-style-type: circle;
+}
+
+.row1_1_graph_text ul li:nth-child(1) {
+    background-color: #FAE1E1;
+}
+
+.row1_1_graph_text ul li:nth-child(2) {
+    background-color: #FBB4B4;
+}
+
+.row1_1_graph_text ul li:nth-child(3) {
+    background-color: #FC6C6C;
 }

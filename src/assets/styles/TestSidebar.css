@@ -28,6 +28,7 @@
     transition: width 0.3s ease;
     padding-top: 15px;
     border-radius: 15px;
+    z-index: 1;
   }
   
   .sidebar .sidebar-position {
