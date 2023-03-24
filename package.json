@@ -20,13 +20,16 @@
     "bootstrap-icons": "^1.10.3",
     "chart.js": "^4.2.1",
     "chartjs": "^0.3.24",
+    "faker": "^5.5.3",
     "ra-i18n-polyglot": "^4.8.4",
     "react": "^18.2.0",
     "react-admin": "^4.8.4",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-google-charts": "^4.0.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.9.0",
+    "recharts": "^2.5.0",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },
@@ -55,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@types/faker": "^6.6.9",
     "customize-cra": "^1.0.0",
     "customize-cra-less-loader": "^2.0.0"
   }
