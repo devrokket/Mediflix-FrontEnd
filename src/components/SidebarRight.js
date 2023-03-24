@@ -83,7 +83,7 @@ function SidebarRight() {
           <div className="sidebar-position">
             <span>
               <TodoKey>
-              <div>업무보드</div>
+              업무보드
               </TodoKey>
               <TodoList/>    
             </span>
