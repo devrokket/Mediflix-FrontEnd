@@ -24,10 +24,17 @@ const PlusButton = styled.img`
   margin-top: 27px;
 `;
 
+const TodoName = styled.div`
+ margin-bottom: 20px;
+ margin-top: 100px;
+`
+
 function TodoList() {
     return (
         <TodoListBlock>
+         <TodoName>
             <div style={{ fontWeight: 'bold'}}>업무보드</div>
+         </TodoName>
             <TodoItemBox>
                 <TodoItem text1="[LIFE 실시간 인기 게시글]"
                 text2="직전주 LIFE 신규 게시글 리뷰하기" done={false} />

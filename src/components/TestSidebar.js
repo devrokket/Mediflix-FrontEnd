@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
+  faUser,
+  faUsers,
   faTimes,
   faCog,
   faSignOut,
+  faBook,
+  faListCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../assets/styles/TestSidebar.css";
@@ -18,6 +22,16 @@ const BottomBlock = styled.div`
   padding: 50px;
   algign-items: center;
 `
+const ClosedIcons = styled.div`
+  margin-top: 170px;
+`
+
+const ThreeIcons = styled.div`
+  font-size: 30px;
+  letter-spacing: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+`
 function TestSidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,8 +42,21 @@ function TestSidebar() {
       <div className="page">
 
         <div className={`sidebar ${isOpen ? "sidebar--open" : ""}`}>
-          <div className="trigger" onClick={handleTrigger}>
-            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
+        <div className="trigger" onClick={handleTrigger}>
+            {isOpen ? (
+              <FontAwesomeIcon icon={faTimes} />
+            ) : (
+              <>
+                <ClosedIcons>
+                <FontAwesomeIcon icon={faBars} />
+                <ThreeIcons>
+                <FontAwesomeIcon icon={faUser} />
+                <FontAwesomeIcon icon={faUsers} />
+                <FontAwesomeIcon icon={faBook} />
+                </ThreeIcons>
+                </ClosedIcons>
+              </>
+            )}
           </div>
 
           <div className="sidebar-position">
