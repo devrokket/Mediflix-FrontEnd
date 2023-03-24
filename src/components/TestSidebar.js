@@ -25,11 +25,6 @@ function TestSidebar() {
 
         <div className={`sidebar ${isOpen ? "sidebar--open" : "test"}`}>
           <div className="trigger" onClick={handleTrigger}>
-          <div className="test">
-            <div>helllo</div>
-            <div>heello</div>
-            <div>eee</div>
-          </div>
             <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
           </div>
 

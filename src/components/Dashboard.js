@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { createGlobalStyle } from 'styled-components';
 
 import Header from './Header';
 import Row1_1 from './Row1_1';
@@ -13,6 +12,7 @@ import Row3_3 from './Row3_3';
 import SidebarLeft from './SidebarLeft';
 import SidebarRight from './SidebarRight';
 import TodoList from './TodoList';
+import TestSidebar from './TestSidebar';
 
 const API = "http://13.124.122.107:8080/logs?selectDate=2023-03-24T06:02:24";
 
@@ -77,7 +77,7 @@ function Dashboard() {
                 </div>
                 <div className='sidebar2'>
                     <aside className='sidebar_wrapper'>
-                        {/* <SidebarRight /> */}
+                        <TestSidebar />
                     </aside>
                 </div>
             </div>

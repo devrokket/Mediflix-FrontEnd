@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   body {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -25,7 +25,7 @@
     right: 140px;
     width: 95px;
     height: 979px;
-    background-color: #D9D9D9;
+    background-color: #F2F2F2;
     transition: width 0.3s ease;
     border-right: 1px #4d606e solid;
     padding-top: 15px;

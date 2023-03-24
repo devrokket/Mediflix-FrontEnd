@@ -87,15 +87,10 @@ function SidebarRight() {
   return (
     <div className="sidebar-right">
       <div className="my-profile">나의 프로필</div>
-
       <ProfileWrapper>
         <Profile src={profile}/> 
         <div>최현아/주임</div>
       </ProfileWrapper>
-    
-      
-            
-      
 
       <SmallBox>
       <b>관리자 목록</b>
